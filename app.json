@@ -19,8 +19,7 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "output": "static"
     },
     "plugins": [
       "expo-router",
@@ -31,6 +30,21 @@
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/Sora-Bold.ttf",
+            "./src/assets/fonts/Sora-ExtraBold.ttf",
+            "./src/assets/fonts/Sora-ExtraLight.ttf",
+            "./src/assets/fonts/Sora-Light.ttf",
+            "./src/assets/fonts/Sora-Medium.ttf",
+            "./src/assets/fonts/Sora-Regular.ttf",
+            "./src/assets/fonts/Sora-SemiBold.ttf",
+            "./src/assets/fonts/Sora-Thin.ttf"
+          ]
         }
       ]
     ],

@@ -1,36 +1,19 @@
-import { FontAwesome } from "@expo/vector-icons";
-import { LinearGradient } from "expo-linear-gradient";
-import { Text, TextInput, View } from "react-native";
+import { FilterItem } from "@/app/components/home/filter-item";
+import { Header } from "@/app/components/home/header";
+import { Text, View } from "react-native";
 
 export default function Home() {
   return (
     <View className="flex-1">
-      <LinearGradient 
-        colors={['#111111', '#313131']}
-        start={{ x: 1, y: 0.2 }}
-        end={{ x: 0.4, y: 1.2 }}
-        locations={[0.3, 0.9]}
-      >
-        <View className="items-center justify-center h-[400px] relative">
-          <FontAwesome
-            className="absolute z-20 top-1/2" 
-            name="search" 
-            color="#FFF"
-            size={20} 
-          />
-          <TextInput 
-            className="p-5 placeholder:text-gray-400 bg-gray-700" 
-            placeholder="Pesquise por um café" 
-          />
-        </View>
-      </LinearGradient>
+      <Header />
 
-      <View>
-        <View>
-          <Text>Filtros</Text>
+      <View className="mt-4 mx-6">
+        <View className="flex-row gap-2">
+          <FilterItem id="1" label="Todos" isActive />
+          <FilterItem id="1" label="Capuccino" />
         </View>
 
-        <Text>Produtos</Text>
+        <Text className="text-2xl">Produtos</Text>
       </View>
     </View>
   )

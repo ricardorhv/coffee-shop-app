@@ -2,7 +2,7 @@ import { useFonts } from 'expo-font';
 import { Stack } from "expo-router";
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from "react";
-import { Text } from "react-native";
+import { StatusBar, Text } from "react-native";
 import '../styles/global.css';
 
 SplashScreen.preventAutoHideAsync();
@@ -30,9 +30,12 @@ export default function Layout() {
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
+      <>
+        <StatusBar barStyle="light-content" backgroundColor='transparent' translucent />
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+      </>
   )
 }

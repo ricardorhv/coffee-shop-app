@@ -12,7 +12,3 @@ export const getCoffeeById = (id: string): Coffee | undefined => {
 export const getCoffeesByCategory = (categoryId: string): Coffee[] => {
   return data.coffees.filter((item) => item.categoryId === categoryId);
 };
-
-export const getCoffeesByName = (name: string): Coffee[] => {
-  return data.coffees.filter((item) => item.name.toLowerCase().includes(name.toLowerCase()));
-};

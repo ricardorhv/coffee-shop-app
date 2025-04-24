@@ -1,7 +1,13 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { TextInput, View } from "react-native";
 
-export function Header() {
+interface HeaderProps {
+  handleFilterCoffeeByName: (filterName: string) => void
+}
+
+//NÃO ESTÁ SENDO UTILIZADO
+
+export function Header({ handleFilterCoffeeByName }: HeaderProps) {
   return (
     <View className="relative flex-row mx-6 mt-12 mb-8">
       <FontAwesome
@@ -12,7 +18,8 @@ export function Header() {
       />
       <TextInput 
         className="p-4 pl-14 text-gray-700 placeholder:text-gray-400 border border-gray-300 bg-gray-300 flex-1 rounded-xl focus:border-product-primary" 
-        placeholder="Pesquise por um café" 
+        placeholder="Pesquise por um café"
+        onChangeText={handleFilterCoffeeByName}
       />
     </View>
   )

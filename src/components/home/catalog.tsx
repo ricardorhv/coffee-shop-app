@@ -1,10 +1,12 @@
-import { getAllCoffees } from "@/services/coffee";
+import { Coffee } from "@/interfaces/coffee";
 import { FlatList, SafeAreaView } from "react-native";
 import { CoffeeCard } from "./coffee-card";
 
-export function Catalog() {
-  const coffees = getAllCoffees()
+interface CatalogProps {
+  coffees: Coffee[]
+}
 
+export function Catalog({ coffees }: CatalogProps) {
   return (
     <SafeAreaView className="my-6">
       <FlatList

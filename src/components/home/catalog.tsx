@@ -13,6 +13,7 @@ export function Catalog() {
         renderItem={
           ({ item }) => 
             <CoffeeCard 
+              id={item.id}
               name={item.name}
               categoryId={item.categoryId}
               image={item.image}
